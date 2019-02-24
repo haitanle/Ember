@@ -5,7 +5,10 @@
 		<li class="menu-item">
 			<h4>{{item.name}}</h4>
 			<img src="/img/{{item.image}}" alt="{{item.name}}">
-			<p><a href='/item/ham-goat-cheese-croissant'>Details</a></p>
+			<p>
+<!-- 				<a href='/item/{{item.id}}'>Details</a> -->
+				{{#link-to 'item' item.id}}Details{{/link-to}}
+			</p>
 		</li>
 	{{/each}}
 </ul>
